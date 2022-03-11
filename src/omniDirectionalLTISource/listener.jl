@@ -1,3 +1,10 @@
+"""
+xxx
+# Examples
+```@example
+
+```
+"""
 struct LTIListener
    sourceList::Vector{Source}
    position::Vector{Float64}
@@ -12,3 +19,6 @@ sourceList = Ψ.sourceList
    end
    return val
 end
+
+# DISPLAY
+Base.show(io::IO, x::LTIListener) = print(io, "LTI omnidirectional listener")

@@ -1,4 +1,10 @@
+"""
+xxx
+# Examples
+```@example
 
+```
+"""
 struct LTISource
   position::Vector{Float64}
   transmission ::Function
@@ -10,3 +16,6 @@ function (𝚽::LTISource)(𝛏₀::Vector{Float64}, t₀::Float64)
    delay = distBetween(𝐩ₛ,𝛏₀)/lightSpeed
    return A(delay) * p(t₀-delay)
 end
+
+# DISPLAY
+Base.show(io::IO, x::LTISource) = print(io, "LTI omnidirectional source")
